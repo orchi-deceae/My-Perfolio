@@ -1,0 +1,85 @@
+.header-{
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: rgb(39, 39, 39);
+    color: white;
+
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100px;
+    font-size: 30px;
+    animation: header 500ms ease-out 3000ms backwards;
+}
+
+.header- span{
+    position: relative;
+}
+.header- span::before{
+    content: "";
+    animation: words 10000ms forwards;
+    animation-delay: 3500ms;
+}
+.header- span::after{
+    content: "";
+    background-color: rgb(39, 39, 39);
+    position: absolute;
+
+    top: 0;
+    right: -8px;
+    width: 0;
+    height: 100%;
+    border-left: 1px solid white;
+    margin-left: 0;
+
+    animation: 
+    cursor 1000ms infinite, 
+    typing 12000ms steps(20) forwards;
+    animation-delay: 3500ms;
+}
+
+@keyframes words {
+    0%, 24%{
+        content: "Hi";
+    }
+
+    25%, 59%{
+        content: "My name is Elvis";
+    }
+    60%, 94%{
+        content: "This is my Perfolio";
+    }
+    95%, 100%{
+        content: "I study";
+    }
+}
+
+@keyframes header {
+    from{
+        right: 100%;
+    }
+    to {
+        right: -8px;
+    }
+}
+
+@keyframes cursor {
+    to {
+        border-color: black;
+    }
+}
+ 
+@keyframes typing {
+    8%, 12%, 32%, 40%, 64%, 72%, 88%, 92%{
+        width: 0%;
+    }
+    0%, 4%, 16%, 24%, 48%, 56%, 80%, 84%{
+        width: calc(100% + 8px);
+    }
+}
+
+
+

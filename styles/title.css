@@ -1,0 +1,53 @@
+.background-{
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: rgba(54, 54, 54, 0.5);
+
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    z-index: 1;
+    animation: back 3000ms ease-in 200ms;
+}
+.title-box-{
+    position: relative;
+    display: flex;
+
+
+    background-color: black;
+    color: white;
+
+    padding: 5px 10px;
+    font-size: 50px;
+    border-radius: 3px;
+}
+.title-tran-{
+    position: absolute;
+    background-color: black;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    animation: curtain 500ms ease-in forwards 1000ms;
+}
+
+@keyframes curtain {
+    from {
+        width: 100%;
+    }
+    to {
+        width: 0;
+    }
+}
+
+@keyframes back {
+    0% {opacity: 0;}
+    16% {opacity: 1;}
+    84% {opacity: 1;}
+    100% {opacity: 0;}
+}
