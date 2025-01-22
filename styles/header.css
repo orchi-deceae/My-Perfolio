@@ -1,10 +1,11 @@
 .header-{
-    position: fixed;
+    position: absolute;
     display: flex;
     justify-content: center;
     align-items: center;
 
     background-color: rgb(39, 39, 39);
+    box-shadow: 0 0 30px black;
     color: white;
 
     top: 0;
@@ -18,12 +19,21 @@
 .header- span{
     position: relative;
 }
-.header- span::before{
+
+
+.header- .span1-::before{
     content: "";
-    animation: words 10000ms forwards;
+    animation: words1 20000ms forwards;
     animation-delay: 3500ms;
 }
-.header- span::after{
+.header- .span2-::before{
+    content: "";
+    animation: words2 20000ms forwards;
+    animation-delay: 23500ms;
+}
+
+
+.header- .span1-::after{
     content: "";
     background-color: rgb(39, 39, 39);
     position: absolute;
@@ -32,30 +42,78 @@
     right: -8px;
     width: 0;
     height: 100%;
-    border-left: 1px solid white;
+    border-left: 1px solid darkorange;
     margin-left: 0;
 
     animation: 
-    cursor 1000ms infinite, 
-    typing 12000ms steps(20) forwards;
+    cursor 850ms infinite, 
+    typing1 20000ms steps(20);
     animation-delay: 3500ms;
 }
+.header- .span2-::after{
+    content: "";
+    background-color: rgb(39, 39, 39);
+    position: absolute;
 
-@keyframes words {
-    0%, 24%{
-        content: "Hi";
+    top: 0;
+    right: -8px;
+    width: 0;
+    height: 100%;
+    border-left: 1px solid darkorange;
+    margin-left: 0;
+
+    animation: 
+    cursor 850ms infinite, 
+    typing2 20000ms steps(20) forwards;
+    animation-delay: 23500ms;
+}
+
+@keyframes words1 {
+    0%, 10%{
+        content: "Hello";
     }
 
-    25%, 59%{
+    11%, 30%{
         content: "My name is Elvis";
     }
-    60%, 94%{
+    31%, 50%{
         content: "This is my Perfolio";
     }
-    95%, 100%{
-        content: "I study";
+    51%, 70%{
+        content: "I am studying CS";
+    }
+    71%, 90%{
+        content: "I am a student of LCU"
+    }
+    91%, 99.9%{
+        content: "Also";
+    }
+    99.99%, 100%{
+        content: "";
     }
 }
+@keyframes words2 {
+    0%, 20%{
+        content: "Here is more about me";
+    }
+
+    21%, 40%{
+        content: "I excel at";
+    }
+    41%, 50%{
+        content: "";
+    }
+    51%, 70%{
+        content: "";
+    }
+    71%, 90%{
+        content: ""
+    }
+    91%, 100%{
+        content: "";
+    }
+}
+
 
 @keyframes header {
     from{
@@ -68,15 +126,23 @@
 
 @keyframes cursor {
     to {
-        border-color: black;
+        border-color: rgb(39, 39, 39);
     }
 }
  
-@keyframes typing {
-    8%, 12%, 32%, 40%, 64%, 72%, 88%, 92%{
+@keyframes typing1 {
+    5%, 7.5%, 20%, 25%, 40%, 45%, 60%, 65%, 80%, 85%, 95%, 97.5%{
         width: 0%;
     }
-    0%, 4%, 16%, 24%, 48%, 56%, 80%, 84%{
+    0%, 2.5%, 10%, 15%, 30%, 35%, 50%, 55%, 70%, 75%, 90%, 92.5%, 100%{
+        width: calc(100% + 8px);
+    }
+}
+@keyframes typing2 {
+    10%, 15%, 30%, 35%, 44%, 45%, 60%, 65%, 80%, 85%, 95%, 97.5%{
+        width: 0%;
+    }
+    0%, 5%, 20%, 25%, 40%, 40%, 50%, 55%, 70%, 75%, 90%, 92.5%, 100%{
         width: calc(100% + 8px);
     }
 }

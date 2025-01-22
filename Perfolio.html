@@ -1,28 +1,224 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>My Perfolio</title>
+        <title>My Portfolio</title>
 
         <link rel="stylesheet" href="styles/general.css">
         <link rel="stylesheet" href="styles/title.css">
         <link rel="stylesheet" href="styles/header.css">
 
         <style>
-            .body-{
-                padding-top: 120px;
-            }
             .perf-{
+                position: absolute;
+                top: 0;
+                left: 0;
+                font-size: 40px;
+                color: white;
+                border-radius: 10px;
+                opacity: 0;
+                animation: perf 500ms 11000ms forwards;
+            }
+            @keyframes perf {
+                    to {
+                        opacity: 1;
+                    }
+            }
+
+            .page-{
+
+            }
+            .body-{
+                width: 100%;
+                padding-top: 120px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+            
+            .profile-{
+                display: flex;
+                justify-content: center;
+                width: 500px;
+                border-radius: 10px;
+                padding: 10px 20px;
                 
+                animation: profilec 500ms ease-out 7000ms forwards;
+            }
+            @keyframes profilec {
+                to {
+                    box-shadow: 0 0 10px;
+                background-color: white;
+                }
             }
             .self-{
                 display: flex;
-                justify-content: center;
-                height: 400px;
+                flex-direction: column;
+                justify-content: space-between;
+                position: relative;
+                margin-right: 25px;
             }
             .self-img-{
-                border-radius: 90px;
+                display: flex;
+                border-radius: 180px;
                 width: 100px;
                 height: 100px;
+                opacity: 0;
+                object-fit: cover;
+                animation: Elvis 500ms ease-in-out 7500ms forwards ;
+            }
+            .lcu-img-{
+                display: flex;
+                border-radius: 180px;
+                width: 100px;
+                height: 100px;
+                opacity: 0;
+                object-fit: cover;
+                animation: Elvis 500ms ease-in-out 19500ms forwards ;
+            }
+            .my-name-{
+                margin-left: 30px;
+                font-size: 30px;
+                opacity: 0;
+                white-space: nowrap;
+                animation: Elvis 500ms ease-in-out 7500ms forwards ;
+            }
+            .study-{
+                margin-left: 30px;
+                font-size: 30px;
+                margin-top: 10px;
+                opacity: 0;
+                animation: Elvis 500ms forwards 14500ms;
+            }
+            .school-{
+                margin-left: 30px;
+                font-size: 30px;
+                margin-top: 10px;
+                opacity: 0;
+                animation: Elvis 500ms forwards 19500ms;
+            }
+            .more-{
+                margin-top: 10px;
+                opacity: 0;
+                animation: Elvis 500ms forwards 25500ms;
+            }
+            .more- div {
+                margin-top: 10px;
+                opacity: 1;
+            }
+            .about-{
+                font-size: 30px;
+            }
+            .me-{
+                font-size: 20px;
+                line-height: 25px;
+                animation: paused;
+  
+            }
+
+            @keyframes Elvis {
+                to {
+                    opacity: 1;
+                    margin-left: 0;
+                }
+            }
+
+            .excel-{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 150px;
+            }
+            .excel-img-{
+                position: relative;
+                animation: excel 500ms ease-out 29000ms forwards;
+                opacity: 0;
+                margin-top: 80px;
+            }
+            @keyframes excel {
+                to {
+                    opacity: 1;
+                    margin-top: 0;
+                }
+            }
+            .excel- img{
+                margin-left: 30px;
+            }
+            .html-img-{
+                height: 105px;
+                width: 105px;
+                margin-top: 20px;
+                object-fit: contain;
+            }
+            .java-img-{
+                height: 90px;
+                width: 90px;
+                object-fit: contain;
+            }
+            .css-img-{
+                height: 180px;
+                width: 180px;
+                object-fit: contain;
+            }
+            .html-circle-{
+                position: absolute;
+                right: -5px;
+                bottom: -10px;
+                height: 120px;
+                width: 120px;
+                border-radius: 90px;
+                box-shadow: 0 0 10px;
+                background-color: rgb(245, 245, 245);
+                z-index: -1;
+            }
+            .css-circle-{
+                position: absolute;
+                right: 30px;
+                bottom: 20px;
+                height: 120px;
+                width: 120px;
+                border-radius: 90px;
+                box-shadow: 0 0 10px;
+                background-color: rgb(245, 245, 245);
+                z-index: -1;
+            }
+            .java-circle-{
+                position: absolute;
+                right: -10px;
+                bottom: -20px;
+                height: 120px;
+                width: 120px;
+                border-radius: 90px;
+                box-shadow: 0 0 10px;
+                background-color: rgb(245, 245, 245);
+                z-index: -1;
+            }
+            .html-txt-{
+                position: absolute;
+                bottom: -5px;
+                right: 25px;
+                color: blue;
+                font-size: 20px;
+                font-weight: 700;
+                z-index: 1;
+            }
+            .css-txt-{
+                position: absolute;
+                bottom: 25px;
+                right: 65px;
+                color: rgb(31, 31, 255);
+                font-size: 20px;
+                font-weight: 700;
+                z-index: 1;
+            }
+            .java-txt-{
+                position: absolute;
+                bottom: -15px;
+                right: 25px;
+                color: rgb(70, 70, 255);
+                font-size: 20px;
+                font-weight: 700;
+                z-index: 1;
             }
         </style>
     </head>
@@ -31,28 +227,52 @@
         <div class="background-">
             <div class="title-box-">
                 <div class="title-tran-"></div>
-                <div class="title-">My Perfolio</div>
+                <div class="title-">My Portfolio</div>
             </div>
         </div>
 
         <div class="header-">
-            <span></span>  
+            <div class="perf-">Portfolio</div>
+           <span class="span1-"></span>
+           <span class="span2-"></span>
+           
         </div>
 
-        <div class="body-">
-            <div class="perf-">Perfolio</div>
-            <div class="self-">
-            <img src="Pictues/WhatsApp Image 2025-01-21 at 12.51.07_2ff902aa.jpg" class="self-img-">
-            </div>
-            <divc class="info-">
-                <div class="my-name-">Elvis Obua Azibawelaman</div>
-                <div class="study-">CyberSecurity</div>
-                <div>
-                    <div>About me</div>
-                    <div>Graduate student of Hansal International School of Bayelsa State. I am currently pursuing a Masters degree in Cyber Security with intrests in tech sports and arts</div>
+            <div class="body-">
+                <div class="profile-">
+                    <div class="self-">
+                        <img src="Pictues/WhatsApp Image 2025-01-21 at 15.34.39_63a03569(1).jpg" class="self-img-">
+                        <img src="Pictues/WhatsApp_Image_2025-01-21_at_12.47.09_e707b5a7-removebg-preview(1).png" class="lcu-img-">
+                    </div>
+                    <div class="info-">
+                        <div class="my-name-">Elvis Obua Azibawelaman</div>
+                        <div class="study-">CyberSecurity</div>
+                        <div class="school-">Lead City University</div>
+                        <div class="more-">
+                            <div class="about-">About me</div>
+                            <div class="me-">Graduate student of Hansal International School of Bayelsa State. I am currently pursuing a Masters degree in Cyber Security with intrests in tech and arts</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="excel-">
+                    <div  class="excel-img-">
+                        <img src="Pictues/WhatsApp_Image_2025-01-21_at_12.46.54_326d250b-removebg-preview(1).png"  class="html-img-">
+                        <div class="html-txt-">HTML</div>
+                        <div class="html-circle-"></div>
+                    </div>                    
+                    <div  class="excel-img-">
+                        <img src="Pictues/WhatsApp_Image_2025-01-21_at_12.46.53_3add457e-removebg-preview.png"  class="css-img-">
+                        <div class="css-txt-">CSS</div>
+                        <div class="css-circle-"></div>
+                    </div>
+                    <div  class="excel-img-">
+                        <img src="Pictues/WhatsApp_Image_2025-01-21_at_12.47.09_e707b5a7-removebg-preview.png"  class="java-img-">
+                        <div class="java-txt-">JAVA</div>
+                        <div class="java-circle-"></div>
+                    </div>
                 </div>
             </div>
-        </div>
         
     </body>
 </html>
