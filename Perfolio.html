@@ -6,219 +6,176 @@
         <link rel="stylesheet" href="styles/general.css">
         <link rel="stylesheet" href="styles/title.css">
         <link rel="stylesheet" href="styles/header.css">
-
+        <link rel="stylesheet" href="styles/body.css">
         <style>
-            .perf-{
-                position: absolute;
-                top: 0;
-                left: 0;
-                font-size: 40px;
-                color: white;
-                border-radius: 10px;
-                opacity: 0;
-                animation: perf 500ms 11000ms forwards;
-            }
-            @keyframes perf {
-                    to {
-                        opacity: 1;
-                    }
-            }
-
-            .page-{
-
-            }
-            .body-{
-                width: 100%;
-                padding-top: 120px;
+            .projects-{
+                position: relative;
                 display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-            }
-            
-            .profile-{
-                display: flex;
-                justify-content: center;
-                width: 500px;
-                border-radius: 10px;
-                padding: 10px 20px;
-                
-                animation: profilec 500ms ease-out 7000ms forwards;
-            }
-            @keyframes profilec {
-                to {
-                    box-shadow: 0 0 10px;
-                background-color: white;
-                }
-            }
-            .self-{
-                display: flex;
-                flex-direction: column;
                 justify-content: space-between;
-                position: relative;
-                margin-right: 25px;
-            }
-            .self-img-{
-                display: flex;
-                border-radius: 180px;
-                width: 100px;
-                height: 100px;
-                opacity: 0;
-                object-fit: cover;
-                animation: Elvis 500ms ease-in-out 7500ms forwards ;
-            }
-            .lcu-img-{
-                display: flex;
-                border-radius: 180px;
-                width: 100px;
-                height: 100px;
-                opacity: 0;
-                object-fit: cover;
-                animation: Elvis 500ms ease-in-out 19500ms forwards ;
-            }
-            .my-name-{
-                margin-left: 30px;
-                font-size: 30px;
-                opacity: 0;
-                white-space: nowrap;
-                animation: Elvis 500ms ease-in-out 7500ms forwards ;
-            }
-            .study-{
-                margin-left: 30px;
-                font-size: 30px;
-                margin-top: 10px;
-                opacity: 0;
-                animation: Elvis 500ms forwards 14500ms;
-            }
-            .school-{
-                margin-left: 30px;
-                font-size: 30px;
-                margin-top: 10px;
-                opacity: 0;
-                animation: Elvis 500ms forwards 19500ms;
-            }
-            .more-{
-                margin-top: 10px;
-                opacity: 0;
-                animation: Elvis 500ms forwards 25500ms;
-            }
-            .more- div {
-                margin-top: 10px;
-                opacity: 1;
-            }
-            .about-{
-                font-size: 30px;
-            }
-            .me-{
-                font-size: 20px;
-                line-height: 25px;
-                animation: paused;
-  
-            }
-
-            @keyframes Elvis {
-                to {
-                    opacity: 1;
-                    margin-left: 0;
-                }
-            }
-
-            .excel-{
-                display: flex;
-                justify-content: center;
                 align-items: center;
-                height: 150px;
+                top: -500px;
             }
-            .excel-img-{
+            .proj-left-{
                 position: relative;
-                animation: excel 500ms ease-out 29000ms forwards;
+                display: grid;
+                row-gap: 50px;
+                grid-template-rows: 1fr 1fr;
+            }
+            .proj-right-{
+                position: relative;
+                right: 0;
+                display: grid;
+                row-gap: 50px;
+                grid-template-rows: 1fr 1fr;
+            }
+            .youtube-img-{
+                width: 220px;
+                height: 220px;
+                padding: 0px 50px;
+                object-fit: contain;
+            }
+            .discord-img-{
+                width: 220px;
+                height: 220px;
+                padding: 0px 50px;
+                object-fit: contain;
+            }
+            .twitter-img-{
+                width: 220px;
+                height: 220px;
+                padding: 0px 50px;
+                object-fit: contain;
+            }
+            .facebook-img-{
+                width: 220px;
+                height: 220px;
+                padding: 0px 50px;
+                object-fit: contain;
+            }
+            .proj1-,
+            .proj2-,
+            .proj3-,
+            .proj4-{
+                position: relative;
+                right: 0px;
+                top: 35px;
                 opacity: 0;
-                margin-top: 80px;
             }
-            @keyframes excel {
-                to {
-                    opacity: 1;
-                    margin-top: 0;
-                }
+            .proj1-{
+                animation: proj 500ms linear 39500ms forwards;
             }
-            .excel- img{
-                margin-left: 30px;
+            .proj2-{
+                animation: proj 500ms linear 42500ms forwards;
             }
-            .html-img-{
-                height: 105px;
-                width: 105px;
-                margin-top: 20px;
-                object-fit: contain;
+            .proj3-{
+                animation: proj 500ms linear 45500ms forwards;
             }
-            .java-img-{
-                height: 90px;
-                width: 90px;
-                object-fit: contain;
+            .proj4-{
+                animation: proj 500ms linear 50000ms forwards;
             }
-            .css-img-{
-                height: 180px;
-                width: 180px;
-                object-fit: contain;
+            @keyframes proj {
+                to {opacity: 1;}
             }
-            .html-circle-{
-                position: absolute;
-                right: -5px;
-                bottom: -10px;
-                height: 120px;
-                width: 120px;
-                border-radius: 90px;
-                box-shadow: 0 0 10px;
-                background-color: rgb(245, 245, 245);
-                z-index: -1;
-            }
-            .css-circle-{
+            .proj1-div-{
                 position: absolute;
                 right: 30px;
-                bottom: 20px;
-                height: 120px;
-                width: 120px;
-                border-radius: 90px;
+                top: 35px;
+                height: 190px;
+                width: 260px;
+                border-radius: 20px;
                 box-shadow: 0 0 10px;
-                background-color: rgb(245, 245, 245);
+                background-color: dimgray;
                 z-index: -1;
             }
-            .java-circle-{
+            .proj2-div-{
                 position: absolute;
-                right: -10px;
-                bottom: -20px;
-                height: 120px;
-                width: 120px;
-                border-radius: 90px;
+                right: 30px;
+                top: 35px;
+                height: 190px;
+                width: 260px;
+                border-radius: 20px;
                 box-shadow: 0 0 10px;
-                background-color: rgb(245, 245, 245);
+                background-color: dimgray;
                 z-index: -1;
             }
-            .html-txt-{
+            .proj3-div-{
                 position: absolute;
-                bottom: -5px;
-                right: 25px;
-                color: blue;
-                font-size: 20px;
-                font-weight: 700;
-                z-index: 1;
+                right: 30px;
+                top: 5px;
+                height: 190px;
+                width: 260px;
+                border-radius: 20px;
+                box-shadow: 0 0 10px;
+                background-color: dimgray;
+                z-index: -1;
             }
-            .css-txt-{
+            .proj4-div-{
                 position: absolute;
-                bottom: 25px;
-                right: 65px;
-                color: rgb(31, 31, 255);
-                font-size: 20px;
-                font-weight: 700;
-                z-index: 1;
+                right: 30px;
+                top: 5px;
+                height: 190px;
+                width: 260px;
+                border-radius: 20px;
+                box-shadow: 0 0 10px;
+                background-color: dimgray;
+                z-index: -1;
             }
-            .java-txt-{
+            .proj1-txt-{
                 position: absolute;
-                bottom: -15px;
-                right: 25px;
-                color: rgb(70, 70, 255);
-                font-size: 20px;
-                font-weight: 700;
-                z-index: 1;
+                right: 110px;
+                bottom: 10px;
+                color: white;
+                font-size: 25px;
+                font-weight: 600;
+            }
+            .proj2-txt-{
+                position: absolute;
+                right: 110px;
+                top: 10px;
+                color: white;
+                font-size: 25px;
+                font-weight: 600;
+            }
+
+            @media (max-width: 1200px) {
+                .projects-{
+                    top: -500px;
+                }
+                .youtube-img-,
+                .discord-img-,
+                .twitter-img-,
+                .facebook-img-{
+                    width: 165px;
+                    height: 165px;
+                }
+                .proj-right-,
+                .proj-left-{
+                    row-gap: 150px;
+                }
+                .proj1-div-,
+                .proj2-div-{
+                    width: 195px;
+                    height: 140px;
+                    right: 35px;
+                    top: 25px;
+                }
+                .proj3-div-,
+                .proj4-div-{
+                    width: 195px;
+                    height: 140px;
+                    right: 35px;
+                    top: 5px;
+                }
+            }
+            @media (max-width: 1085px) {
+                .projects-{
+                    top: 0;
+                    justify-content: center;
+                }
+                .proj-right-,
+                .proj-left-{
+                    row-gap: 50px;
+                }
             }
         </style>
     </head>
@@ -235,44 +192,74 @@
             <div class="perf-">Portfolio</div>
            <span class="span1-"></span>
            <span class="span2-"></span>
-           
+           <span class="span3-"></span>
         </div>
 
-            <div class="body-">
-                <div class="profile-">
-                    <div class="self-">
-                        <img src="Pictues/WhatsApp Image 2025-01-21 at 15.34.39_63a03569(1).jpg" class="self-img-">
-                        <img src="Pictues/WhatsApp_Image_2025-01-21_at_12.47.09_e707b5a7-removebg-preview(1).png" class="lcu-img-">
-                    </div>
-                    <div class="info-">
-                        <div class="my-name-">Elvis Obua Azibawelaman</div>
-                        <div class="study-">CyberSecurity</div>
-                        <div class="school-">Lead City University</div>
-                        <div class="more-">
-                            <div class="about-">About me</div>
-                            <div class="me-">Graduate student of Hansal International School of Bayelsa State. I am currently pursuing a Masters degree in Cyber Security with intrests in tech and arts</div>
-                        </div>
-                    </div>
+        <div class="body-">
+            <div class="profile-">
+                <div class="self-">
+                    <img src="Pictues/WhatsApp Image 2025-01-21 at 15.34.39_63a03569(1).jpg" class="self-img-">
+                    <img src="Pictues/WhatsApp_Image_2025-01-21_at_12.47.09_e707b5a7-removebg-preview(1).png" class="lcu-img-">
                 </div>
-
-                <div class="excel-">
-                    <div  class="excel-img-">
-                        <img src="Pictues/WhatsApp_Image_2025-01-21_at_12.46.54_326d250b-removebg-preview(1).png"  class="html-img-">
-                        <div class="html-txt-">HTML</div>
-                        <div class="html-circle-"></div>
-                    </div>                    
-                    <div  class="excel-img-">
-                        <img src="Pictues/WhatsApp_Image_2025-01-21_at_12.46.53_3add457e-removebg-preview.png"  class="css-img-">
-                        <div class="css-txt-">CSS</div>
-                        <div class="css-circle-"></div>
-                    </div>
-                    <div  class="excel-img-">
-                        <img src="Pictues/WhatsApp_Image_2025-01-21_at_12.47.09_e707b5a7-removebg-preview.png"  class="java-img-">
-                        <div class="java-txt-">JAVA</div>
-                        <div class="java-circle-"></div>
+                <div class="info-">
+                    <div class="my-name-">Elvis Obua Azibawelaman</div>
+                    <div class="study-">CyberSecurity</div>
+                    <div class="school-">Lead City University</div>
+                    <div class="more-">
+                        <div class="about-">About me</div>
+                        <div class="me-">Graduate student of Hansal International School of Bayelsa State. I am currently pursuing a Masters degree in Cyber Security with intrests in tech and arts</div>
                     </div>
                 </div>
             </div>
+
+            <div class="excel-">
+                <div  class="excel-img-">
+                    <img src="Pictues/WhatsApp_Image_2025-01-21_at_12.46.54_326d250b-removebg-preview(1).png"  class="html-img-">
+                    <div class="html-txt-">HTML</div>
+                    <div class="html-circle-"></div>
+                </div>                    
+                <div  class="excel-img-">
+                    <img src="Pictues/WhatsApp_Image_2025-01-21_at_12.46.53_3add457e-removebg-preview.png"  class="css-img-">
+                    <div class="css-txt-">CSS</div>
+                    <div class="css-circle-"></div>
+                </div>
+                <div  class="excel-img-">
+                    <img src="Pictues/WhatsApp_Image_2025-01-21_at_12.47.09_e707b5a7-removebg-preview.png"  class="java-img-">
+                    <div class="java-txt-">JAVA</div>
+                    <div class="java-circle-"></div>
+                </div>
+            </div>
+        </div>
+
+        
+
+        <div class="projects-">
+            <div class="proj-left-">
+                <div class="proj1-">
+                    <img src="Projects/Screenshot 2025-01-19 154918.png" class="youtube-img-">
+                    <div class="proj1-div-"></div>
+                    <div class="proj1-txt-">Project 1</div>
+                </div>
+                <div class="proj3-">
+                    <img src="Projects/live-feed-editor-twitter-feed-pro.jpg" class="twitter-img-">
+                    <div class="proj3-div-"></div>
+                    <div class="proj2-txt-">Project 3</div>
+                </div>
+            </div>
+
+            <div class="proj-right-">
+                <div class="proj2-">
+                    <img src="Projects/Screenshot 2025-01-22 174710.png" class="discord-img-">
+                    <div class="proj2-div-"></div>
+                    <div class="proj1-txt-">Project 2</div>
+                </div>
+                <div class="proj4-">
+                    <img src="Projects/Facebook-Homepage.jpg" class="facebook-img-">
+                    <div class="proj4-div-"></div>
+                    <div class="proj2-txt-">Project 4</div>
+                </div>
+            </div>
+        </div>
         
     </body>
 </html>

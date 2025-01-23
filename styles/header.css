@@ -1,3 +1,19 @@
+.perf-{
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 40px;
+    color: white;
+    border-radius: 10px;
+    opacity: 0;
+    animation: perf 500ms 11000ms forwards;
+}
+@keyframes perf {
+        to {
+            opacity: 1;
+        }
+}
+
 .header-{
     position: absolute;
     display: flex;
@@ -30,6 +46,11 @@
     content: "";
     animation: words2 20000ms forwards;
     animation-delay: 23500ms;
+}
+.header- .span3-::before{
+    content: "";
+    animation: words3 20000ms forwards;
+    animation-delay: 43500ms;
 }
 
 
@@ -67,6 +88,23 @@
     typing2 20000ms steps(20) forwards;
     animation-delay: 23500ms;
 }
+.header- .span3-::after{
+    content: "";
+    background-color: rgb(39, 39, 39);
+    position: absolute;
+
+    top: 0;
+    right: -8px;
+    width: 0;
+    height: 100%;
+    border-left: 1px solid darkorange;
+    margin-left: 0;
+
+    animation: 
+    cursor 850ms infinite, 
+    typing3 20000ms steps(20) forwards;
+    animation-delay: 43500ms;
+}
 
 @keyframes words1 {
     0%, 10%{
@@ -77,13 +115,13 @@
         content: "My name is Elvis";
     }
     31%, 50%{
-        content: "This is my Perfolio";
+        content: "This is my Portfolio";
     }
     51%, 70%{
         content: "I am studying CS";
     }
     71%, 90%{
-        content: "I am a student of LCU"
+        content: "I am a student of LCU";
     }
     91%, 99.9%{
         content: "Also";
@@ -100,16 +138,37 @@
     21%, 40%{
         content: "I excel at";
     }
-    41%, 50%{
+    41%, 70%{
+        content: "I have used these to create";
+    }
+    71%, 90%{
+        content: "Youtube's Homepage";
+    }
+    91%, 99.9%{
+        content: "Discord"
+    }
+    99.99%, 100%{
         content: "";
     }
-    51%, 70%{
+}
+@keyframes words3 {
+    0%, 20%{
+        content: "Twitter's Homepage";
+    }
+
+    21%, 45%{
+        content: "And Facebook's Homepage";
+    }
+    46%, 70%{
         content: "";
     }
     71%, 90%{
+        content: "";
+    }
+    91%, 99.9%{
         content: ""
     }
-    91%, 100%{
+    99.99%, 100%{
         content: "";
     }
 }
@@ -136,13 +195,21 @@
     }
     0%, 2.5%, 10%, 15%, 30%, 35%, 50%, 55%, 70%, 75%, 90%, 92.5%, 100%{
         width: calc(100% + 8px);
-    }
+    } 
 }
 @keyframes typing2 {
-    10%, 15%, 30%, 35%, 44%, 45%, 60%, 65%, 80%, 85%, 95%, 97.5%{
+    10%, 15%, 30%, 35%, 55%, 62.5%, 80%, 85%, 95%, 97.5%{
         width: 0%;
     }
-    0%, 5%, 20%, 25%, 40%, 40%, 50%, 55%, 70%, 75%, 90%, 92.5%, 100%{
+    0%, 5%, 20%, 25%, 40%, 47.5%, 70%, 75%, 90%, 92.5%, 100%{
+        width: calc(100% + 8px);
+    }
+}
+@keyframes typing3 {
+    10%, 15%, 32.5%, 38.75%, 55%, 62.5%, 80%, 85%, 95%, 97.5%{
+        width: 0%;
+    }
+    0%, 5%, 20%, 26.25%, 45%, 47.5%, 70%, 75%, 90%, 92.5%, 100%{
         width: calc(100% + 8px);
     }
 }

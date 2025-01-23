@@ -1,0 +1,207 @@
+.body-{
+    width: 100%;
+    padding-top: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-{
+    display: flex;
+    justify-content: center;
+    width: 500px;
+    border-radius: 10px;
+    padding: 30px 30px;
+    
+    animation: profilec 500ms ease-out 7000ms forwards;
+}
+@keyframes profilec {
+    to {
+        box-shadow: 0 0 10px;
+    background-color: white;
+    }
+}
+.self-{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    margin-right: 50px;
+}
+.self-img-{
+    display: flex;
+    border-radius: 180px;
+    width: 100px;
+    height: 100px;
+    opacity: 0;
+    object-fit: cover;
+    animation: Elvis 500ms ease-in-out 7500ms forwards ;
+}
+.lcu-img-{
+    display: flex;
+    border-radius: 180px;
+    width: 100px;
+    height: 100px;
+    opacity: 0;
+    object-fit: cover;
+    animation: Elvis 500ms ease-in-out 25500ms forwards ;
+}
+.my-name-{
+    margin-left: 30px;
+    font-size: 30px;
+    opacity: 0;
+    white-space: nowrap;
+    animation: Elvis 500ms ease-in-out 7500ms forwards ;
+}
+.study-{
+    margin-left: 30px;
+    font-size: 22px;
+    opacity: 0;
+    color: rgb(51, 51, 51);
+    animation: Elvis 500ms forwards 15500ms;
+}
+.school-{
+    margin-left: 30px;
+    font-size: 22px;
+    opacity: 0;
+    color: rgb(51, 51, 51);
+    animation: Elvis 500ms forwards 19500ms;
+}
+.more-{
+    margin-top: 5px;
+    opacity: 0;
+    animation: Elvis 500ms forwards 25500ms;
+}
+.more- div {
+    margin-top: 5px;
+    opacity: 1;
+}
+.about-{
+    font-size: 23px;
+}
+.me-{
+    font-size: 18px;
+    line-height: 25px;
+    animation: paused;
+    color: rgb(51, 51, 51);
+}
+
+@keyframes Elvis {
+    to {
+        opacity: 1;
+        margin-left: 0;
+    }
+}
+
+.excel-{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+}
+.excel-img-{
+    position: relative;
+    animation: excel 500ms ease-out 29500ms forwards;
+    opacity: 0;
+    margin-top: 80px;
+}
+@keyframes excel {
+    to {
+        opacity: 1;
+        margin-top: 0;
+    }
+}
+.excel- img{
+    margin-left: 30px;
+}
+.html-img-{
+    height: 105px;
+    width: 105px;
+    margin-top: 20px;
+    object-fit: contain;
+}
+.java-img-{
+    height: 90px;
+    width: 90px;
+    object-fit: contain;
+}
+.css-img-{
+    height: 180px;
+    width: 180px;
+    object-fit: contain;
+}
+.html-circle-{
+    position: absolute;
+    right: -5px;
+    bottom: -10px;
+    height: 120px;
+    width: 120px;
+    border-radius: 90px;
+    box-shadow: 0 0 10px;
+    background-color: rgb(245, 245, 245);
+    z-index: -1;
+    animation: circlec 1500ms 34500ms linear;
+}
+.css-circle-{
+    position: absolute;
+    right: 30px;
+    bottom: 20px;
+    height: 120px;
+    width: 120px;
+    border-radius: 90px;
+    box-shadow: 0 0 10px;
+    background-color: rgb(245, 245, 245);
+    z-index: -1;
+    animation: circlec 1500ms 34500ms linear;
+}
+.java-circle-{
+    position: absolute;
+    right: -10px;
+    bottom: -20px;
+    height: 120px;
+    width: 120px;
+    border-radius: 90px;
+    box-shadow: 0 0 10px;
+    background-color: rgb(245, 245, 245);
+    z-index: -1;
+    animation: circlec 1500ms 34500ms linear;
+}
+@keyframes circlec {
+    0% {
+        background-color: white;
+    }
+    50% {
+        background-color: rgb(199, 199, 199);
+    }
+    100% {
+        background-color: white;
+    }
+}
+.html-txt-{
+    position: absolute;
+    bottom: -5px;
+    right: 25px;
+    color: blue;
+    font-size: 20px;
+    font-weight: 700;
+    z-index: 1;
+}
+.css-txt-{
+    position: absolute;
+    bottom: 25px;
+    right: 65px;
+    color: rgb(31, 31, 255);
+    font-size: 20px;
+    font-weight: 700;
+    z-index: 1;
+}
+.java-txt-{
+    position: absolute;
+    bottom: -15px;
+    right: 25px;
+    color: rgb(70, 70, 255);
+    font-size: 20px;
+    font-weight: 700;
+    z-index: 1;
+}
