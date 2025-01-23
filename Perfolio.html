@@ -10,22 +10,65 @@
         <link rel="stylesheet" href="styles/sides.css">
 
         <style>
-            .twitter-icon-{
+            .contact-{
                 position: absolute;
+                display: flex;
+                top: 50px;
                 left: 0;
-                bottom: -16px;
-                height: 75px;
-                width: 75px;
-                margin-left: 40px;
-                object-fit: contain;
+                z-index: 11;
+                opacity: 0;
+                animation: contact-tran 500ms ease-out 59500ms forwards;
+            }
+            @keyframes contact-tran {
+                to {
+                    opacity: 1;
+                }
+            }
+            .github-link-{
+                position: relative;
+                display: flex;
+            }
+            .twitter-link-{
+                position: relative;
+                display: flex;
             }
             .github-icon-{
-                position: absolute;
-                left: 5px;
-                bottom: 0;
                 height: 50px;
                 width: 50px;
+                margin-left: 5px;
                 object-fit: contain;
+            }
+            .twitter-icon-{
+                position: absolute;
+                top: -10px;
+                height: 75px;
+                width: 75px;
+                margin-left: 35px;
+                object-fit: contain;
+            } 
+            .send-{
+                display: flex;
+                flex-direction: column;
+                left: 0;
+                right: 0;
+                z-index: 100;
+            }
+            .fullname-{
+                margin: 0px;
+                padding: 20px 5px;
+            }
+            .fullname-::placeholder {
+                font-size: 25px;
+            }
+            .email-{
+                margin: 0px;
+                padding: 30px 5px;
+            }
+            .email-::placeholder {
+                font-size: 25px;
+            }
+            .send- button{
+                width: 100px;
             }
         </style>
     </head>
@@ -43,15 +86,21 @@
            <span class="span1-"></span>
            <span class="span2-"></span>
            <span class="span3-"></span>
-           <div class="Contact-">
-            <a href="https://github.com/orchi-deceae"  class="twitter-img-">
-                <img src="Contact me/1707222563twitter-logo-png-removebg-preview.png">
-            </a>
-            <a href="https://x.com/"  class="github-img-">
-                <img src="Contact me/1024px-Github_logo_svg.svg.png">
-            </a>            
-           </div>
+           <span class="span4-"></span>
         </div>
+
+        <div class="contact-">
+            <div class="github-link-">
+                <a href="https://github.com/orchi-deceae" class="github-link-">
+                    <img src="Contact me/1024px-Github_logo_svg.svg.png" class="github-icon-">
+                </a>
+            </div> 
+            <div class="twitter-link-">
+                <a href="https://x.com/" class="twitter-link-">
+                    <img src="Contact me/1707222563twitter-logo-png-removebg-preview.png" class="twitter-icon-">
+                </a>
+            </div>
+       </div>
 
         <div class="body-">
             <div class="profile-">
@@ -119,5 +168,11 @@
             </div>
         </div>
         
+        <div class="send-">
+            <input type="text" placeholder="Full Name" required class="fullname-"><br />
+            <input type="email" placeholder="Email Id" required class="email-"><br />
+            <textarea placeholder="Message" required></textarea><br />
+            <button>Send</button>
+        </div>
     </body>
 </html>

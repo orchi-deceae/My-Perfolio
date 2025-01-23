@@ -31,6 +31,11 @@
     font-size: 30px;
     animation: header 500ms ease-out 3000ms backwards;
 }
+@media (max-width: 750px) {
+    .header-{
+        font-size: 25px;
+    }
+}
 
 .header- span{
     position: relative;
@@ -51,6 +56,11 @@
     content: "";
     animation: words3 20000ms forwards;
     animation-delay: 43500ms;
+}
+.header- .span4-::before{
+    content: "";
+    animation: words4 20000ms forwards;
+    animation-delay: 63500ms;
 }
 
 
@@ -105,6 +115,23 @@
     typing3 20000ms steps(20) forwards;
     animation-delay: 43500ms;
 }
+.header- .span4-::after{
+    content: "";
+    background-color: rgb(26, 32, 47);
+    position: absolute;
+
+    top: 0;
+    right: -8px;
+    width: 0;
+    height: 100%;
+    border-left: 1px solid darkorange;
+    margin-left: 0;
+
+    animation: 
+    cursor 850ms infinite, 
+    typing4 20000ms steps(20) forwards;
+    animation-delay: 63500ms;
+}
 
 @keyframes words1 {
     0%, 10%{
@@ -132,11 +159,11 @@
 }
 @keyframes words2 {
     0%, 20%{
-        content: "Here is more about me";
+        content: "Here is more about me.";
     }
 
     21%, 40%{
-        content: "I excel at";
+        content: "I excel at,";
     }
     41%, 70%{
         content: "I have used these to create";
@@ -157,10 +184,30 @@
     }
 
     21%, 45%{
-        content: "And Facebook's Homepage";
+        content: "And Facebook's Homepage.";
     }
     46%, 70%{
+        content: "You can contact me through,";
+    }
+    71%, 90%{
+        content: "Github and Twitter";
+    }
+    91%, 99.9%{
+        content: "And also"
+    }
+    99.99%, 100%{
         content: "";
+    }
+}
+@keyframes words4 {
+    0%, 20%{
+        content: "through this page";
+    }
+    21%, 45%{
+        content: "Thank you for watching";
+    }
+    46%, 70%{
+        content: "Goodbye";
     }
     71%, 90%{
         content: "";
@@ -206,13 +253,20 @@
     }
 }
 @keyframes typing3 {
-    10%, 15%, 32.5%, 38.75%, 55%, 62.5%, 80%, 85%, 95%, 97.5%{
+    10%, 15%, 32.5%, 38.75%, 57.5%, 63.75%, 80%, 85%, 95%, 97.5%{
         width: 0%;
     }
-    0%, 5%, 20%, 26.25%, 45%, 47.5%, 70%, 75%, 90%, 92.5%, 100%{
+    0%, 5%, 20%, 26.25%, 45%, 51.25%, 70%, 75%, 90%, 92.5%, 100%{
         width: calc(100% + 8px);
     }
 }
-
+@keyframes typing4 {
+    10%, 15%, 32.5%, 38.75%, 57.5%, 63.75%, 80%, 85%, 95%, 97.5%{
+        width: 0%;
+    }
+    0%, 5%, 20%, 26.25%, 45%, 51.25%, 70%, 75%, 90%, 92.5%, 100%{
+        width: calc(100% + 8px);
+    }
+}
 
 
