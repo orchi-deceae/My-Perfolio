@@ -1,0 +1,169 @@
+.projects-{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    top: -500px;
+}
+.proj-left-{
+    position: relative;
+    display: grid;
+    row-gap: 50px;
+    grid-template-rows: 1fr 1fr;
+}
+.proj-right-{
+    position: relative;
+    right: 0;
+    display: grid;
+    row-gap: 50px;
+    grid-template-rows: 1fr 1fr;
+}
+.youtube-img-{
+    width: 220px;
+    height: 220px;
+    padding: 0px 50px;
+    object-fit: contain;
+}
+.discord-img-{
+    width: 220px;
+    height: 220px;
+    padding: 0px 50px;
+    object-fit: contain;
+}
+.twitter-img-{
+    width: 220px;
+    height: 220px;
+    padding: 0px 50px;
+    object-fit: contain;
+}
+.facebook-img-{
+    width: 220px;
+    height: 220px;
+    padding: 0px 50px;
+    object-fit: contain;
+}
+.proj1-,
+.proj2-,
+.proj3-,
+.proj4-{
+    position: relative;
+    right: 0px;
+    top: 35px;
+    opacity: 0;
+}
+.proj1-{
+    animation: proj 500ms linear 39500ms forwards;
+}
+.proj2-{
+    animation: proj 500ms linear 42500ms forwards;
+}
+.proj3-{
+    animation: proj 500ms linear 45500ms forwards;
+}
+.proj4-{
+    animation: proj 500ms linear 50000ms forwards;
+}
+@keyframes proj {
+    to {opacity: 1;}
+}
+.proj1-box-{
+    position: absolute;
+    right: 30px;
+    top: 35px;
+    height: 190px;
+    width: 260px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px;
+    background-color: dimgray;
+    z-index: -1;
+}
+.proj2-box-{
+    position: absolute;
+    right: 30px;
+    top: 35px;
+    height: 190px;
+    width: 260px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px;
+    background-color: dimgray;
+    z-index: -1;
+}
+.proj3-box-{
+    position: absolute;
+    right: 30px;
+    top: 5px;
+    height: 190px;
+    width: 260px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px;
+    background-color: dimgray;
+    z-index: -1;
+}
+.proj4-box-{
+    position: absolute;
+    right: 30px;
+    top: 5px;
+    height: 190px;
+    width: 260px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px;
+    background-color: dimgray;
+    z-index: -1;
+}
+.proj1-txt-{
+    position: absolute;
+    right: 110px;
+    bottom: 10px;
+    color: white;
+    font-size: 25px;
+    font-weight: 600;
+}
+.proj2-txt-{
+    position: absolute;
+    right: 110px;
+    top: 10px;
+    color: white;
+    font-size: 25px;
+    font-weight: 600;
+}
+
+@media (max-width: 1200px) {
+    .projects-{
+        top: -500px;
+    }
+    .youtube-img-,
+    .discord-img-,
+    .twitter-img-,
+    .facebook-img-{
+        width: 165px;
+        height: 165px;
+    }
+    .proj-right-,
+    .proj-left-{
+        row-gap: 150px;
+    }
+    .proj1-box-,
+    .proj2-box-{
+        width: 195px;
+        height: 140px;
+        right: 35px;
+        top: 25px;
+    }
+    .proj3-box-,
+    .proj4-box-{
+        width: 195px;
+        height: 140px;
+        right: 35px;
+        top: 5px;
+    }
+}
+@media (max-width: 1085px) {
+    .projects-{
+        top: 0;
+        justify-content: center;
+    }
+    .proj-right-,
+    .proj-left-{
+        row-gap: 50px;
+    }
+}

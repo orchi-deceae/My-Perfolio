@@ -7,175 +7,25 @@
         <link rel="stylesheet" href="styles/title.css">
         <link rel="stylesheet" href="styles/header.css">
         <link rel="stylesheet" href="styles/body.css">
-        <style>
-            .projects-{
-                position: relative;
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                top: -500px;
-            }
-            .proj-left-{
-                position: relative;
-                display: grid;
-                row-gap: 50px;
-                grid-template-rows: 1fr 1fr;
-            }
-            .proj-right-{
-                position: relative;
-                right: 0;
-                display: grid;
-                row-gap: 50px;
-                grid-template-rows: 1fr 1fr;
-            }
-            .youtube-img-{
-                width: 220px;
-                height: 220px;
-                padding: 0px 50px;
-                object-fit: contain;
-            }
-            .discord-img-{
-                width: 220px;
-                height: 220px;
-                padding: 0px 50px;
-                object-fit: contain;
-            }
-            .twitter-img-{
-                width: 220px;
-                height: 220px;
-                padding: 0px 50px;
-                object-fit: contain;
-            }
-            .facebook-img-{
-                width: 220px;
-                height: 220px;
-                padding: 0px 50px;
-                object-fit: contain;
-            }
-            .proj1-,
-            .proj2-,
-            .proj3-,
-            .proj4-{
-                position: relative;
-                right: 0px;
-                top: 35px;
-                opacity: 0;
-            }
-            .proj1-{
-                animation: proj 500ms linear 39500ms forwards;
-            }
-            .proj2-{
-                animation: proj 500ms linear 42500ms forwards;
-            }
-            .proj3-{
-                animation: proj 500ms linear 45500ms forwards;
-            }
-            .proj4-{
-                animation: proj 500ms linear 50000ms forwards;
-            }
-            @keyframes proj {
-                to {opacity: 1;}
-            }
-            .proj1-div-{
-                position: absolute;
-                right: 30px;
-                top: 35px;
-                height: 190px;
-                width: 260px;
-                border-radius: 20px;
-                box-shadow: 0 0 10px;
-                background-color: dimgray;
-                z-index: -1;
-            }
-            .proj2-div-{
-                position: absolute;
-                right: 30px;
-                top: 35px;
-                height: 190px;
-                width: 260px;
-                border-radius: 20px;
-                box-shadow: 0 0 10px;
-                background-color: dimgray;
-                z-index: -1;
-            }
-            .proj3-div-{
-                position: absolute;
-                right: 30px;
-                top: 5px;
-                height: 190px;
-                width: 260px;
-                border-radius: 20px;
-                box-shadow: 0 0 10px;
-                background-color: dimgray;
-                z-index: -1;
-            }
-            .proj4-div-{
-                position: absolute;
-                right: 30px;
-                top: 5px;
-                height: 190px;
-                width: 260px;
-                border-radius: 20px;
-                box-shadow: 0 0 10px;
-                background-color: dimgray;
-                z-index: -1;
-            }
-            .proj1-txt-{
-                position: absolute;
-                right: 110px;
-                bottom: 10px;
-                color: white;
-                font-size: 25px;
-                font-weight: 600;
-            }
-            .proj2-txt-{
-                position: absolute;
-                right: 110px;
-                top: 10px;
-                color: white;
-                font-size: 25px;
-                font-weight: 600;
-            }
+        <link rel="stylesheet" href="styles/sides.css">
 
-            @media (max-width: 1200px) {
-                .projects-{
-                    top: -500px;
-                }
-                .youtube-img-,
-                .discord-img-,
-                .twitter-img-,
-                .facebook-img-{
-                    width: 165px;
-                    height: 165px;
-                }
-                .proj-right-,
-                .proj-left-{
-                    row-gap: 150px;
-                }
-                .proj1-div-,
-                .proj2-div-{
-                    width: 195px;
-                    height: 140px;
-                    right: 35px;
-                    top: 25px;
-                }
-                .proj3-div-,
-                .proj4-div-{
-                    width: 195px;
-                    height: 140px;
-                    right: 35px;
-                    top: 5px;
-                }
+        <style>
+            .twitter-icon-{
+                position: absolute;
+                left: 0;
+                bottom: -16px;
+                height: 75px;
+                width: 75px;
+                margin-left: 40px;
+                object-fit: contain;
             }
-            @media (max-width: 1085px) {
-                .projects-{
-                    top: 0;
-                    justify-content: center;
-                }
-                .proj-right-,
-                .proj-left-{
-                    row-gap: 50px;
-                }
+            .github-icon-{
+                position: absolute;
+                left: 5px;
+                bottom: 0;
+                height: 50px;
+                width: 50px;
+                object-fit: contain;
             }
         </style>
     </head>
@@ -193,6 +43,14 @@
            <span class="span1-"></span>
            <span class="span2-"></span>
            <span class="span3-"></span>
+           <div class="">
+            <a href="https://github.com/orchi-deceae"  class="twitter-img-">
+                <img src="Contact me/1707222563twitter-logo-png-removebg-preview.png">
+            </a>
+            <a href="https://x.com/"  class="github-img-">
+                <img src="Contact me/1024px-Github_logo_svg.svg.png">
+            </a>            
+           </div>
         </div>
 
         <div class="body-">
@@ -237,12 +95,12 @@
             <div class="proj-left-">
                 <div class="proj1-">
                     <img src="Projects/Screenshot 2025-01-19 154918.png" class="youtube-img-">
-                    <div class="proj1-div-"></div>
+                    <div class="proj1-box-"></div>
                     <div class="proj1-txt-">Project 1</div>
                 </div>
                 <div class="proj3-">
                     <img src="Projects/live-feed-editor-twitter-feed-pro.jpg" class="twitter-img-">
-                    <div class="proj3-div-"></div>
+                    <div class="proj3-box-"></div>
                     <div class="proj2-txt-">Project 3</div>
                 </div>
             </div>
@@ -250,12 +108,12 @@
             <div class="proj-right-">
                 <div class="proj2-">
                     <img src="Projects/Screenshot 2025-01-22 174710.png" class="discord-img-">
-                    <div class="proj2-div-"></div>
+                    <div class="proj2-box-"></div>
                     <div class="proj1-txt-">Project 2</div>
                 </div>
                 <div class="proj4-">
                     <img src="Projects/Facebook-Homepage.jpg" class="facebook-img-">
-                    <div class="proj4-div-"></div>
+                    <div class="proj4-box-"></div>
                     <div class="proj2-txt-">Project 4</div>
                 </div>
             </div>
