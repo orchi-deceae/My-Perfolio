@@ -8,68 +8,22 @@
         <link rel="stylesheet" href="styles/header.css">
         <link rel="stylesheet" href="styles/body.css">
         <link rel="stylesheet" href="styles/sides.css">
+        <link rel="stylesheet" href="styles/contactme.css">
+
+        <script type="text/javascript"
+            src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+        </script>
+        <script type="text/javascript">
+            (function(){
+            emailjs.init({
+            publicKey: "zTSt9xG4nomIVZOgQ",
+            });
+            })();
+        </script>
 
         <style>
-            .contact-{
-                position: absolute;
-                display: flex;
-                top: 50px;
-                left: 0;
-                z-index: 11;
-                opacity: 0;
-                animation: contact-tran 500ms ease-out 59500ms forwards;
-            }
-            @keyframes contact-tran {
-                to {
-                    opacity: 1;
-                }
-            }
-            .github-link-{
-                position: relative;
-                display: flex;
-            }
-            .twitter-link-{
-                position: relative;
-                display: flex;
-            }
-            .github-icon-{
-                height: 50px;
-                width: 50px;
-                margin-left: 5px;
-                object-fit: contain;
-            }
-            .twitter-icon-{
-                position: absolute;
-                top: -10px;
-                height: 75px;
-                width: 75px;
-                margin-left: 35px;
-                object-fit: contain;
-            } 
-            .send-{
-                display: flex;
-                flex-direction: column;
-                left: 0;
-                right: 0;
-                z-index: 100;
-            }
-            .fullname-{
-                margin: 0px;
-                padding: 20px 5px;
-            }
-            .fullname-::placeholder {
-                font-size: 25px;
-            }
-            .email-{
-                margin: 0px;
-                padding: 30px 5px;
-            }
-            .email-::placeholder {
-                font-size: 25px;
-            }
-            .send- button{
-                width: 100px;
-            }
+            
+            
         </style>
     </head>
 
@@ -91,12 +45,12 @@
 
         <div class="contact-">
             <div class="github-link-">
-                <a href="https://github.com/orchi-deceae" class="github-link-">
+                <a href="https://github.com/orchi-deceae" class="github-link-" target="_blank">
                     <img src="Contact me/1024px-Github_logo_svg.svg.png" class="github-icon-">
                 </a>
             </div> 
             <div class="twitter-link-">
-                <a href="https://x.com/" class="twitter-link-">
+                <a href="https://x.com/" class="twitter-link-" target="_blank">
                     <img src="Contact me/1707222563twitter-logo-png-removebg-preview.png" class="twitter-icon-">
                 </a>
             </div>
@@ -168,11 +122,29 @@
             </div>
         </div>
         
-        <div class="send-">
-            <input type="text" placeholder="Full Name" required class="fullname-"><br />
-            <input type="email" placeholder="Email Id" required class="email-"><br />
-            <textarea placeholder="Message" required></textarea><br />
-            <button>Send</button>
-        </div>
+        <form>
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="subject">Subject</label>
+                <input type="text" id="subject" name="subject" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+            </div>
+            <div class="send-">
+                <button type="submit" onclick="sendMail()">Send</button>
+            </div>
+            
+        </form>
+
+        <script src="script2.js"></script>
     </body>
 </html>

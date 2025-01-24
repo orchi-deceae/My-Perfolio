@@ -1,3 +1,4 @@
+/*Id Section*/
 .body-{
     width: 100%;
     padding-top: 120px;
@@ -94,6 +95,7 @@
     }
 }
 
+/*Coding Language Section*/
 .excel-{
     display: flex;
     justify-content: center;
@@ -102,9 +104,9 @@
 }
 .excel-img-{
     position: relative;
-    animation: excel 500ms ease-out 29500ms forwards;
     opacity: 0;
     margin-top: 80px;
+    animation: excel 500ms ease-out 29500ms forwards;
 }
 @keyframes excel {
     to {
@@ -167,15 +169,18 @@
     z-index: -1;
     animation: circlec 1500ms 34000ms linear;
 }
+.html-circle-:hover{
+    background-color: rgb(220, 220, 220);
+}
 @keyframes circlec {
     0% {
-        background-color: rgb(200, 200, 200);
+        background-color: rgb(245, 245, 245);
     }
     50% {
-        background-color: cyan;
+        background-color: rgba(0, 255, 255, 0.5);
     }
     100% {
-        background-color: rgb(200, 200, 200);
+        background-color: rgb(245, 245, 245);
     }
 }
 .html-txt-{
