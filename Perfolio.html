@@ -6,6 +6,7 @@
         <link rel="stylesheet" href="styles/general.css">
         <link rel="stylesheet" href="styles/title.css">
         <link rel="stylesheet" href="styles/header.css">
+        <link rel="stylesheet" href="styles/script.css">
         <link rel="stylesheet" href="styles/body.css">
         <link rel="stylesheet" href="styles/sides.css">
         <link rel="stylesheet" href="styles/contactme.css">
@@ -19,6 +20,12 @@
             publicKey: "zTSt9xG4nomIVZOgQ",
             });
             })();
+
+
+            function handleSubmit(e)  {
+                e.preventDefault()
+
+            }
         </script>
 
         <style>
@@ -122,7 +129,7 @@
             </div>
         </div>
         
-        <form>
+        <form onsubmit="handleSubmit()">
             <div class="form-group">
                 <label for="name">Name</label>
                 <input type="text" id="name" name="name" required>
