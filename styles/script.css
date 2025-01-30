@@ -16,11 +16,7 @@
     font-size: 30px;
     animation: header 500ms ease-out 3000ms backwards;
 }
-@media (max-width: 750px) {
-    .header-{
-        font-size: 25px;
-    }
-}
+
 
 .header- span{
     position: relative;
@@ -198,7 +194,7 @@
         content: "Goodbye :)";
     }
     91%, 99.9%{
-        content: ""
+        content: "c to skip"
     }
     99.99%, 100%{
         content: "";

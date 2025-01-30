@@ -210,3 +210,30 @@
     font-weight: 700;
     z-index: 1;
 }
+.skipbutt2-{
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    font-size: 50px;
+    border: none;
+    color: black;
+    background-color: transparent;
+    cursor: pointer;
+    z-index: 2;
+}
+
+@keyframes skip2 {
+    2% {
+        right: 0;
+    }
+    98% {
+        right: 0;
+    }
+    100% {
+        right: -145px;
+    }
+}
+
+.skipbutt2-:active {
+    color: white;
+}
